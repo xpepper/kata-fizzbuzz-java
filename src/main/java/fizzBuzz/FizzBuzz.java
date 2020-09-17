@@ -1,7 +1,7 @@
 //This example is based on _Java Examples in a Nutshell_. (http://www.oreilly.com)
 //Copyright (c) 1997 by David Flanagan
 
-package fizzBuzz;
+package fizzbuzz;
 
 public class FizzBuzz {
 
