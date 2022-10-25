@@ -9,7 +9,7 @@ public class FizzBuzz {
 
     public String translate(int number) {
         String result = "";
-        result = fizzRule.evaluate(number, result);
+        result += fizzRule.evaluate(number);
         result = buzz(number, result);
         result = plainNumber(number, result);
 

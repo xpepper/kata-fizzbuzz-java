@@ -4,10 +4,10 @@ public class FizzRule {
     public FizzRule() {
     }
 
-    String evaluate(int number, String result) {
+    String evaluate(int number) {
         if (isMultipleOfFive(number))
-            result += "Fizz";
-        return result;
+            return "Fizz";
+        return "";
     }
 
     boolean isMultipleOfFive(int number) {
