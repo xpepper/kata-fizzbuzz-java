@@ -6,13 +6,21 @@ package fizzbuzz;
 public class FizzBuzz {
 
 	public String translate(int number) {
-		if (((number % 5) == 0) && ((number % 7) == 0)) // A multiple of both?
+		if (isMultipleOfFive(number) && isMultipleOfSeven(number))
 			return "FizzBuzz";
-		if ((number % 5) == 0)
-			return "Fizz"; // else a multiple of 5?
-		if ((number % 7) == 0)
-			return "Buzz"; // else a multiple of 7?
+		if (isMultipleOfFive(number))
+			return "Fizz";
+		if (isMultipleOfSeven(number))
+			return "Buzz";
 
-		return String.valueOf(number); // else just print it
+		return String.valueOf(number);
+	}
+
+	private static boolean isMultipleOfSeven(int number) {
+		return (number % 7) == 0;
+	}
+
+	private static boolean isMultipleOfFive(int number) {
+		return (number % 5) == 0;
 	}
 }
