@@ -5,12 +5,12 @@ public class BuzzRule {
     }
 
     String evaluate(int number) {
-        if (isMultipleOfSeven(number))
+        if (isMultipleOf(7, number))
             return "Buzz";
         return "";
     }
 
-    boolean isMultipleOfSeven(int number) {
-        return (number % 7) == 0;
+    private boolean isMultipleOf(int base, int number) {
+        return (number % base) == 0;
     }
 }

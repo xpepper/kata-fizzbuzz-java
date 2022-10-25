@@ -5,12 +5,12 @@ public class FizzRule {
     }
 
     String evaluate(int number) {
-        if (isMultipleOfFive(number))
+        if (isMultipleOf(5, number))
             return "Fizz";
         return "";
     }
 
-    boolean isMultipleOfFive(int number) {
-        return (number % 5) == 0;
+    private boolean isMultipleOf(int base, int number) {
+        return (number % base) == 0;
     }
 }
