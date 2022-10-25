@@ -6,14 +6,13 @@ package fizzbuzz;
 public class FizzBuzz {
 
 	public String translate(int number) {
-		if (isMultipleOfFive(number) && isMultipleOfSeven(number))
-			return "FizzBuzz";
+		String result = "";
 		if (isMultipleOfFive(number))
-			return "Fizz";
+			result += "Fizz";
 		if (isMultipleOfSeven(number))
-			return "Buzz";
+			result +="Buzz";
 
-		return String.valueOf(number);
+		return result.isEmpty()? String.valueOf(number) : result;
 	}
 
 	private boolean isMultipleOfSeven(int number) {
