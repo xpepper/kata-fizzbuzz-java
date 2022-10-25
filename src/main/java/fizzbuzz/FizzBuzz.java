@@ -10,7 +10,7 @@ public class FizzBuzz {
     public String translate(int number) {
         String result = "";
         result += fizzRule.evaluate(number);
-        result = buzz(number, result);
+        result += buzz(number);
         result = plainNumber(number, result);
 
         return result;
@@ -22,10 +22,10 @@ public class FizzBuzz {
         return result;
     }
 
-    private String buzz(int number, String result) {
+    private String buzz(int number) {
         if (isMultipleOfSeven(number))
-            result += "Buzz";
-        return result;
+            return "Buzz";
+        return "";
     }
 
     private boolean isMultipleOfSeven(int number) {
