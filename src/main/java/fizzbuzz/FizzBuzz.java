@@ -16,11 +16,11 @@ public class FizzBuzz {
 		return String.valueOf(number);
 	}
 
-	private static boolean isMultipleOfSeven(int number) {
+	private boolean isMultipleOfSeven(int number) {
 		return (number % 7) == 0;
 	}
 
-	private static boolean isMultipleOfFive(int number) {
+	private boolean isMultipleOfFive(int number) {
 		return (number % 5) == 0;
 	}
 }
