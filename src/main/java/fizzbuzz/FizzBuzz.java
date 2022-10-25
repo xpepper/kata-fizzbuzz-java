@@ -5,9 +5,11 @@ package fizzbuzz;
 
 public class FizzBuzz {
 
+    private final FizzRule fizzRule = new FizzRule();
+
     public String translate(int number) {
         String result = "";
-        result = fizz(number, result);
+        result = fizzRule.evaluate(number, result);
         result = buzz(number, result);
         result = plainNumber(number, result);
 
@@ -26,17 +28,8 @@ public class FizzBuzz {
         return result;
     }
 
-    private String fizz(int number, String result) {
-        if (isMultipleOfFive(number))
-            result += "Fizz";
-        return result;
-    }
-
     private boolean isMultipleOfSeven(int number) {
         return (number % 7) == 0;
     }
 
-    private boolean isMultipleOfFive(int number) {
-        return (number % 5) == 0;
-    }
 }
