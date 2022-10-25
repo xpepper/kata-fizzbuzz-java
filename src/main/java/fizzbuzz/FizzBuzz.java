@@ -7,13 +7,28 @@ public class FizzBuzz {
 
     public String translate(int number) {
         String result = "";
-        if (isMultipleOfFive(number))
-            result += "Fizz";
-        if (isMultipleOfSeven(number))
-            result += "Buzz";
+        result = fizz(number, result);
+        result = buzz(number, result);
+        result = plainNumber(number, result);
+
+        return result;
+    }
+
+    private String plainNumber(int number, String result) {
         if (result.isEmpty())
             result += String.valueOf(number);
+        return result;
+    }
 
+    private String buzz(int number, String result) {
+        if (isMultipleOfSeven(number))
+            result += "Buzz";
+        return result;
+    }
+
+    private String fizz(int number, String result) {
+        if (isMultipleOfFive(number))
+            result += "Fizz";
         return result;
     }
 
