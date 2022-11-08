@@ -7,6 +7,7 @@ public class FizzBuzz {
 
     private final FizzRule fizzRule = new FizzRule();
     private final BuzzRule buzzRule = new BuzzRule();
+    private final ToStringRule toStringRule = new ToStringRule();
 
     public String translate(int number) {
         String result = "";
@@ -19,7 +20,7 @@ public class FizzBuzz {
 
     private String plainNumber(int number, String result) {
         if (result.isEmpty())
-            result += String.valueOf(number);
+            result += toStringRule.evaluate(number);
         return result;
     }
 
