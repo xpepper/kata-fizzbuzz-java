@@ -5,9 +5,9 @@ package fizzbuzz;
 
 public class FizzBuzz {
 
-    private final FizzRule fizzRule = new FizzRule();
+    private final Rule rule = new FizzRule();
     private final BuzzRule buzzRule = new BuzzRule();
-    private final SumRule sumRule = new SumRule(fizzRule, buzzRule);
+    private final SumRule sumRule = new SumRule(rule, buzzRule);
     private final ToStringRule toStringRule = new ToStringRule();
 
     public String translate(int number) {
