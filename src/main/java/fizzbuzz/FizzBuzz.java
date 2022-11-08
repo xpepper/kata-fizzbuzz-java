@@ -11,12 +11,7 @@ public class FizzBuzz {
     private final ToStringRule toStringRule = new ToStringRule();
 
     public String translate(int number) {
-        String result = sumRule.evaluate(number);
-
-        if (result.isEmpty())
-            return toStringRule.evaluate(number);
-
-        return result;
+        return new OrRule(sumRule, toStringRule).evaluate(number);
     }
 
 }
