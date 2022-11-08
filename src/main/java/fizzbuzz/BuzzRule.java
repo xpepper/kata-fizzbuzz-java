@@ -1,15 +1,17 @@
 package fizzbuzz;
 
-public class BuzzRule {
+public class BuzzRule implements Rule {
     public BuzzRule() {
     }
 
-    public String apply() {
-        return "Buzz";
-    }
-
+    @Override
     public boolean appliesTo(int number) {
         return isMultipleOf(7, number);
+    }
+
+    @Override
+    public String apply() {
+        return "Buzz";
     }
 
     private boolean isMultipleOf(int base, int number) {

@@ -1,12 +1,12 @@
 package fizzbuzz;
 
 public class SumRule {
-    private final Rule rule;
-    private final BuzzRule buzzRule;
+    private final Rule firstRule;
+    private final Rule secondRule;
 
-    public SumRule(Rule rule, BuzzRule buzzRule) {
-        this.rule = rule;
-        this.buzzRule = buzzRule;
+    public SumRule(Rule firstRule, Rule secondRule) {
+        this.firstRule = firstRule;
+        this.secondRule = secondRule;
     }
 
     String evaluate(int number) {
@@ -14,14 +14,14 @@ public class SumRule {
     }
 
     private String evaluateBuzzRule(int number) {
-        if (buzzRule.appliesTo(number))
-            return buzzRule.apply();
+        if (secondRule.appliesTo(number))
+            return secondRule.apply();
         return "";
     }
 
     private String evaluateFizzRule(int number) {
-        if (rule.appliesTo(number))
-            return rule.apply();
+        if (firstRule.appliesTo(number))
+            return firstRule.apply();
         return "";
     }
 
