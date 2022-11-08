@@ -34,5 +34,6 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 ## Machen
 
 - SumRule => AllRule
-- extract interface
+- change interface to introduce number on apply
+- introduce a template method to enforce the applicability of the rule before applying it
 - packages for rules
