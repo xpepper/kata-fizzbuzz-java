@@ -12,14 +12,10 @@ public class FizzBuzz {
 
     public String translate(int number) {
         String result = sumRule.evaluate(number);
-        result = plainNumber(number, result);
 
-        return result;
-    }
-
-    private String plainNumber(int number, String result) {
         if (result.isEmpty())
-            result += toStringRule.evaluate(number);
+            return toStringRule.evaluate(number);
+
         return result;
     }
 
