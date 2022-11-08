@@ -7,10 +7,11 @@ public class FizzBuzz {
 
     private final FizzRule fizzRule = new FizzRule();
     private final BuzzRule buzzRule = new BuzzRule();
+    private final SumRule sumRule = new SumRule(fizzRule, buzzRule);
     private final ToStringRule toStringRule = new ToStringRule();
 
     public String translate(int number) {
-        String result = fizzRule.evaluate(number) + buzzRule.evaluate(number);
+        String result = sumRule.evaluate(number);
         result = plainNumber(number, result);
 
         return result;
