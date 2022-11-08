@@ -4,12 +4,6 @@ public class FizzRule {
     public FizzRule() {
     }
 
-    String evaluate(int number) {
-        if (appliesTo(number))
-            return apply();
-        return "";
-    }
-
     public String apply() {
         return "Fizz";
     }

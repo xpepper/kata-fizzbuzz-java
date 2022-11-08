@@ -10,7 +10,13 @@ public class SumRule {
     }
 
     String evaluate(int number) {
-        return fizzRule.evaluate(number) + buzzRule.evaluate(number);
+        return evaluateFizzRule(number) + buzzRule.evaluate(number);
+    }
+
+    private String evaluateFizzRule(int number) {
+        if (fizzRule.appliesTo(number))
+            return fizzRule.apply();
+        return "";
     }
 
 }
