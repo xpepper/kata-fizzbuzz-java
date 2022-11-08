@@ -12,4 +12,5 @@ public class SumRule {
     String evaluate(int number) {
         return fizzRule.evaluate(number) + buzzRule.evaluate(number);
     }
+
 }

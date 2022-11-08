@@ -34,3 +34,5 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 ## Machen
 
 - Define `canApply` method when extracting the Rule interface
+- extract interface
+- packages for rules
