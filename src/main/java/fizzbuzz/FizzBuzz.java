@@ -10,9 +10,7 @@ public class FizzBuzz {
     private final ToStringRule toStringRule = new ToStringRule();
 
     public String translate(int number) {
-        String result = "";
-        result += fizzRule.evaluate(number);
-        result += buzzRule.evaluate(number);
+        String result = fizzRule.evaluate(number) + buzzRule.evaluate(number);
         result = plainNumber(number, result);
 
         return result;
