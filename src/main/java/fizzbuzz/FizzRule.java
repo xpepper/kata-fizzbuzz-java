@@ -11,6 +11,10 @@ public class FizzRule implements Rule {
 
     @Override
     public String apply(int number) {
+        return doApply(number);
+    }
+
+    protected String doApply(int number) {
         return "Fizz";
     }
 

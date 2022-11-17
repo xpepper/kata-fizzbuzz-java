@@ -34,4 +34,5 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 ## Machen
 
 - introduce a template method to enforce the applicability of the rule before applying it
+- `SumRule` should have a list of rules to sum
 - packages for rules
