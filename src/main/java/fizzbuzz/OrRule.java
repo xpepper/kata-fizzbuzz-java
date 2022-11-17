@@ -10,6 +10,10 @@ public class OrRule {
     }
 
     String evaluate(int number) {
+        return apply(number);
+    }
+
+    public String apply(int number) {
         String result = sumRule.evaluate(number);
 
         if (result.isEmpty())
