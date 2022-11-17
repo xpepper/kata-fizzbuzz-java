@@ -11,6 +11,9 @@ public class FizzRule implements Rule {
 
     @Override
     public String apply(int number) {
+        if (!appliesTo(number))
+            throw new RuntimeException("Cannot apply rule " + this.getClass());
+
         return doApply(number);
     }
 
