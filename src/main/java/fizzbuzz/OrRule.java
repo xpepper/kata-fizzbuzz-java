@@ -13,7 +13,7 @@ public class OrRule implements Rule {
     public String apply(int number) {
         String result = firstRule.apply(number);
 
-        if (result.isEmpty())
+        if (!firstRule.appliesTo(number))
             return secondRule.apply(number);
 
         return result;
