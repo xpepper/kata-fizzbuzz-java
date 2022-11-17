@@ -33,6 +33,8 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 
 ## Machen
 
-- introduce a template method to enforce the applicability of the rule before applying it
-- `SumRule` should have a list of rules to sum
-- packages for rules
+- [R] keep on adopting the new `AbstractRule` in all the rules
+- [R] merging `Rule` into `AbstractRule`
+- [R] `SumRule` should have a list of rules to sum
+- [R] packages for rules
+- [F] add Foo rule
