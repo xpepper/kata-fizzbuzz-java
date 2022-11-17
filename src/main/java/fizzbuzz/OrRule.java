@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class OrRule {
+public class OrRule implements Rule {
     private final SumRule sumRule;
     private final ToStringRule toStringRule;
 
@@ -13,6 +13,7 @@ public class OrRule {
         return apply(number);
     }
 
+    @Override
     public String apply(int number) {
         String result = sumRule.evaluate(number);
 
@@ -20,5 +21,10 @@ public class OrRule {
             return toStringRule.apply(number);
 
         return result;
+    }
+
+    @Override
+    public boolean appliesTo(int number) {
+        return false;
     }
 }
