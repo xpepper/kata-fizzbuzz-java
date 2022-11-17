@@ -33,5 +33,6 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 
 ## Machen
 
+- OrRule#appliesTo should be implemented as an OR between SumRule and ToStringRule
 - introduce a template method to enforce the applicability of the rule before applying it
 - packages for rules
