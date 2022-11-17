@@ -10,7 +10,7 @@ public class BuzzRule implements Rule {
     }
 
     @Override
-    public String apply() {
+    public String apply(int number) {
         return "Buzz";
     }
 

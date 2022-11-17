@@ -10,7 +10,7 @@ public class FizzRule implements Rule {
     }
 
     @Override
-    public String apply() {
+    public String apply(int number) {
         return "Fizz";
     }
 
