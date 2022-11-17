@@ -1,20 +1,20 @@
 package fizzbuzz;
 
 public class OrRule implements Rule {
-    private final SumRule sumRule;
-    private final ToStringRule toStringRule;
+    private final Rule firstRule;
+    private final Rule secondRule;
 
-    public OrRule(SumRule sumRule, ToStringRule toStringRule) {
-        this.sumRule = sumRule;
-        this.toStringRule = toStringRule;
+    public OrRule(Rule firstRule, Rule secondRule) {
+        this.firstRule = firstRule;
+        this.secondRule = secondRule;
     }
 
     @Override
     public String apply(int number) {
-        String result = sumRule.apply(number);
+        String result = firstRule.apply(number);
 
         if (result.isEmpty())
-            return toStringRule.apply(number);
+            return secondRule.apply(number);
 
         return result;
     }
