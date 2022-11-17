@@ -11,7 +11,7 @@ public class OrRule implements Rule {
 
     @Override
     public String apply(int number) {
-        String result = sumRule.evaluate(number);
+        String result = sumRule.apply(number);
 
         if (result.isEmpty())
             return toStringRule.apply(number);

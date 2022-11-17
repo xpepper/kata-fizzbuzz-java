@@ -9,10 +9,6 @@ public class SumRule implements Rule {
         this.secondRule = secondRule;
     }
 
-    String evaluate(int number) {
-        return apply(number);
-    }
-
     @Override
     public String apply(int number) {
         return evaluateFizzRule(number) + evaluateBuzzRule(number);
