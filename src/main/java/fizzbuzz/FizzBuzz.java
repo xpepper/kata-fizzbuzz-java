@@ -5,10 +5,10 @@ package fizzbuzz;
 
 public class FizzBuzz {
 
-    private final Rule rule = new FizzRule();
-    private final BuzzRule buzzRule = new BuzzRule();
-    private final SumRule sumRule = new SumRule(rule, buzzRule);
-    private final ToStringRule toStringRule = new ToStringRule();
+    private final Rule fizzRule = new FizzRule();
+    private final Rule buzzRule = new BuzzRule();
+    private final Rule sumRule = new SumRule(fizzRule, buzzRule);
+    private final Rule toStringRule = new ToStringRule();
 
     public String translate(int number) {
         return new OrRule(sumRule, toStringRule).apply(number);
