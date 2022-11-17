@@ -5,16 +5,16 @@ public class ToStringRule implements Rule {
     }
 
     public String evaluate(int number) {
-        return String.valueOf(number);
+        return apply(number);
     }
 
     @Override
     public String apply(int number) {
-        return null;
+        return String.valueOf(number);
     }
 
     @Override
     public boolean appliesTo(int number) {
-        return false;
+        return true;
     }
 }
