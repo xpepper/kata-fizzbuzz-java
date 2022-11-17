@@ -9,10 +9,6 @@ public class OrRule implements Rule {
         this.toStringRule = toStringRule;
     }
 
-    String evaluate(int number) {
-        return apply(number);
-    }
-
     @Override
     public String apply(int number) {
         String result = sumRule.evaluate(number);
