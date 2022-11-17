@@ -13,7 +13,7 @@ public class OrRule {
         String result = sumRule.evaluate(number);
 
         if (result.isEmpty())
-            return toStringRule.evaluate(number);
+            return toStringRule.apply(number);
 
         return result;
     }
