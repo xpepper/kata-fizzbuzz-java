@@ -15,13 +15,13 @@ public class SumRule {
 
     private String evaluateBuzzRule(int number) {
         if (secondRule.appliesTo(number))
-            return secondRule.apply(-1);
+            return secondRule.apply(number);
         return "";
     }
 
     private String evaluateFizzRule(int number) {
         if (firstRule.appliesTo(number))
-            return firstRule.apply(-1);
+            return firstRule.apply(number);
         return "";
     }
 
