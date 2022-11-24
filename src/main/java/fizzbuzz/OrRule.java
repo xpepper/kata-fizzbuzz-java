@@ -11,12 +11,11 @@ public class OrRule implements Rule {
 
     @Override
     public String apply(int number) {
-        String result = firstRule.apply(number);
-
-        if (!firstRule.appliesTo(number))
+        if (firstRule.appliesTo(number)) {
+            return firstRule.apply(number);
+        } else {
             return secondRule.apply(number);
-
-        return result;
+        }
     }
 
     @Override
