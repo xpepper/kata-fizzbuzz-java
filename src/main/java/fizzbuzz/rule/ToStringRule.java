@@ -1,4 +1,4 @@
-package fizzbuzz;
+package fizzbuzz.rule;
 
 public class ToStringRule extends Rule {
     public ToStringRule() {

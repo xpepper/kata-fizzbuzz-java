@@ -1,4 +1,4 @@
-package fizzbuzz;
+package fizzbuzz.rule;
 
 public class OrRule extends Rule {
     private final Rule firstRule;

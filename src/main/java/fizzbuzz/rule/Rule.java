@@ -1,4 +1,4 @@
-package fizzbuzz;
+package fizzbuzz.rule;
 
 public abstract class Rule {
 

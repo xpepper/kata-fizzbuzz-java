@@ -34,6 +34,5 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 ## Machen
 
 - [R] `SumRule` should have a list of rules to sum
-- [R] `OrRule` should have a list of rules and apply the first applicable
-- [R] packages for rules
 - [F] add Foo rule
+- [R] `OrRule` should have a list of rules and apply the first applicable
