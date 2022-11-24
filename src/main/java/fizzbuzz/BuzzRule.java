@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class BuzzRule implements Rule {
+public class BuzzRule extends AbstractRule {
     public BuzzRule() {
     }
 
@@ -10,10 +10,6 @@ public class BuzzRule implements Rule {
     }
 
     @Override
-    public String apply(int number) {
-        return doApply(number);
-    }
-
     protected String doApply(int number) {
         return "Buzz";
     }
