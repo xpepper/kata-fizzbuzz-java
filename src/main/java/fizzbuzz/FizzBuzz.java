@@ -5,6 +5,7 @@ package fizzbuzz;
 
 import fizzbuzz.rule.BuzzRule;
 import fizzbuzz.rule.FizzRule;
+import fizzbuzz.rule.FooRule;
 import fizzbuzz.rule.OrRule;
 import fizzbuzz.rule.Rule;
 import fizzbuzz.rule.SumRule;
@@ -12,10 +13,11 @@ import fizzbuzz.rule.ToStringRule;
 
 public class FizzBuzz {
 
+    private final Rule fooRule = new FooRule();
     private final Rule fizzRule = new FizzRule();
     private final Rule buzzRule = new BuzzRule();
     private final Rule toStringRule = new ToStringRule();
-    private final Rule sumRule = new SumRule(fizzRule, buzzRule);
+    private final Rule sumRule = new SumRule(fooRule, new SumRule(fizzRule, buzzRule));
     private final Rule orRule = new OrRule(sumRule, toStringRule);
 
     public String translate(int number) {

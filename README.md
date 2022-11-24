@@ -33,6 +33,7 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 
 ## Machen
 
+
+- [F] apply Foo also on numbers multiple of 7 
 - [R] `SumRule` should have a list of rules to sum
-- [F] add Foo rule
 - [R] `OrRule` should have a list of rules and apply the first applicable
