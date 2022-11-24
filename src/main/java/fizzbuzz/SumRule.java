@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class SumRule extends AbstractRule {
+public class SumRule extends Rule {
     private final Rule firstRule;
     private final Rule secondRule;
 

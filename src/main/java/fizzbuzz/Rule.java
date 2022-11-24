@@ -1,7 +1,15 @@
 package fizzbuzz;
 
-public interface Rule {
-    String apply(int number);
+public abstract class Rule {
 
-    boolean appliesTo(int number);
+    public abstract boolean appliesTo(int number);
+
+    public String apply(int number) {
+        if (!appliesTo(number))
+            throw new RuntimeException("Cannot apply rule " + this.getClass());
+
+        return doApply(number);
+    }
+
+    protected abstract String doApply(int number);
 }

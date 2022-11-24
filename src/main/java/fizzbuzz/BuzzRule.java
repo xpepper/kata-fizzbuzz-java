@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class BuzzRule extends AbstractRule {
+public class BuzzRule extends Rule {
     public BuzzRule() {
     }
 

@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class ToStringRule extends AbstractRule {
+public class ToStringRule extends Rule {
     public ToStringRule() {
     }
 

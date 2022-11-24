@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class OrRule extends AbstractRule {
+public class OrRule extends Rule {
     private final Rule firstRule;
     private final Rule secondRule;
 
