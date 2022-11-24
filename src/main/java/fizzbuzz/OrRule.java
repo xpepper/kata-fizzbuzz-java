@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class OrRule implements Rule {
+public class OrRule extends AbstractRule {
     private final Rule firstRule;
     private final Rule secondRule;
 
@@ -10,7 +10,7 @@ public class OrRule implements Rule {
     }
 
     @Override
-    public String apply(int number) {
+    protected String doApply(int number) {
         if (firstRule.appliesTo(number)) {
             return firstRule.apply(number);
         } else {
