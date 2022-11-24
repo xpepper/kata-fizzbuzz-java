@@ -36,5 +36,6 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 - [R] keep on adopting the new `AbstractRule` in all the rules
 - [R] merging `Rule` into `AbstractRule`
 - [R] `SumRule` should have a list of rules to sum
+- [R] `OrRule` should have a list of rules and apply the first applicable
 - [R] packages for rules
 - [F] add Foo rule
