@@ -3,13 +3,20 @@
 
 package fizzbuzz;
 
+import fizzbuzz.rule.BuzzRule;
+import fizzbuzz.rule.FizzRule;
+import fizzbuzz.rule.OrRule;
+import fizzbuzz.rule.Rule;
+import fizzbuzz.rule.SumRule;
+import fizzbuzz.rule.ToStringRule;
+
 public class FizzBuzz {
 
-    private final fizzbuzz.rule.Rule fizzRule = new fizzbuzz.rule.FizzRule();
-    private final fizzbuzz.rule.Rule buzzRule = new fizzbuzz.rule.BuzzRule();
-    private final fizzbuzz.rule.Rule toStringRule = new fizzbuzz.rule.ToStringRule();
-    private final fizzbuzz.rule.Rule sumRule = new fizzbuzz.rule.SumRule(fizzRule, buzzRule);
-    private final fizzbuzz.rule.Rule orRule = new fizzbuzz.rule.OrRule(sumRule, toStringRule);
+    private final Rule fizzRule = new FizzRule();
+    private final Rule buzzRule = new BuzzRule();
+    private final Rule toStringRule = new ToStringRule();
+    private final Rule sumRule = new SumRule(fizzRule, buzzRule);
+    private final Rule orRule = new OrRule(sumRule, toStringRule);
 
     public String translate(int number) {
         return orRule.apply(number);
