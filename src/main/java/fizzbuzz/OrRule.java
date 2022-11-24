@@ -20,6 +20,6 @@ public class OrRule implements Rule {
 
     @Override
     public boolean appliesTo(int number) {
-        return false;
+        return firstRule.appliesTo(number) || secondRule.appliesTo(number);
     }
 }
