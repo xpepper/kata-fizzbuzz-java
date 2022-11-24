@@ -1,11 +1,11 @@
 package fizzbuzz;
 
-public class ToStringRule implements Rule {
+public class ToStringRule extends AbstractRule {
     public ToStringRule() {
     }
 
     @Override
-    public String apply(int number) {
+    protected String doApply(int number) {
         return String.valueOf(number);
     }
 
