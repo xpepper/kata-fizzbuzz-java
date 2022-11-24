@@ -34,6 +34,7 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 ## Machen
 
 
-- [F] apply Foo also on numbers multiple of 7 
+- [F] apply Foo also on numbers multiple of 7
+- [R] rename tests to convey more info on how the rule works (E.g. `FooComesFirstAndIsOn...`)
 - [R] `SumRule` should have a list of rules to sum
 - [R] `OrRule` should have a list of rules and apply the first applicable
