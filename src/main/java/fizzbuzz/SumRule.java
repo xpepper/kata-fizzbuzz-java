@@ -1,6 +1,6 @@
 package fizzbuzz;
 
-public class SumRule implements Rule {
+public class SumRule extends AbstractRule {
     private final Rule firstRule;
     private final Rule secondRule;
 
@@ -10,7 +10,7 @@ public class SumRule implements Rule {
     }
 
     @Override
-    public String apply(int number) {
+    protected String doApply(int number) {
         return evaluateFizzRule(number) + evaluateBuzzRule(number);
     }
 
