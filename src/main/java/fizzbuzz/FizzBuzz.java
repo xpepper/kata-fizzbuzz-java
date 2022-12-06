@@ -10,7 +10,6 @@ public class FizzBuzz {
     private final Rule fooForMultipleOfSix = new RuleForMultipleOf(6, "Foo");
     private final Rule fooForMultipleOfSeven = new RuleForMultipleOf(7, "Foo");
     private final Rule fooRule = new OrRule(fooForMultipleOfSix, fooForMultipleOfSeven);
-
     private final Rule fizzRule = new RuleForMultipleOf(5, "Fizz");
     private final Rule buzzRule = new RuleForMultipleOf(7, "Buzz");
     private final Rule toStringRule = new ToStringRule();
