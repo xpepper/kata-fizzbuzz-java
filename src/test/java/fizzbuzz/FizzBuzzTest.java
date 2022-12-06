@@ -31,7 +31,14 @@ public class FizzBuzzTest {
 	public void FizzBuzz() {
 		FizzBuzz fizzbuzzer = new FizzBuzz();
 		String result = fizzbuzzer.translate(35);
-		assertEquals("FooFizzBuzz", result);
+		assertEquals("FooFizzBarBuzz", result);
+	}
+
+	@Test
+	public void Bar() {
+		FizzBuzz barzer = new FizzBuzz();
+		String result = barzer.translate(123);
+		assertEquals("Bar", result);
 	}
 
 	@Test
