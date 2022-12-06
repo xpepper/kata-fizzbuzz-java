@@ -3,32 +3,35 @@
 
 package fizzbuzz;
 
-import fizzbuzz.rule.BuzzRule;
-import fizzbuzz.rule.FizzRule;
-import fizzbuzz.rule.FooRule;
-import fizzbuzz.rule.OrRule;
-import fizzbuzz.rule.Rule;
-import fizzbuzz.rule.SumRule;
-import fizzbuzz.rule.ToStringRule;
+import fizzbuzz.rule.*;
 
 public class FizzBuzz {
 
-    private final Rule fooRule = new FooRule();
-    private final Rule fooForMultipleOfSeven = new FooForMultipleOfSeven();
+    private final Rule fooForMultipleOfSix = new FooForMultipleOf(6);
+    private final Rule fooForMultipleOfSeven = new FooForMultipleOf(7);
+    private final Rule fooRule = new OrRule(fooForMultipleOfSix, fooForMultipleOfSeven);
+
     private final Rule fizzRule = new FizzRule();
     private final Rule buzzRule = new BuzzRule();
     private final Rule toStringRule = new ToStringRule();
-    private final Rule sumRule = new SumRule(new OrRule(fooRule, fooForMultipleOfSeven), new SumRule(fizzRule, buzzRule));
+    private final Rule sumRule = new SumRule(fooRule, new SumRule(fizzRule, buzzRule));
     private final Rule orRule = new OrRule(sumRule, toStringRule);
 
     public String translate(int number) {
         return orRule.apply(number);
     }
 
-    private class FooForMultipleOfSeven extends Rule {
+    private class FooForMultipleOf extends Rule {
+
+        private final int baseNumber;
+
+        public FooForMultipleOf(int baseNumber) {
+            this.baseNumber = baseNumber;
+        }
+
         @Override
         public boolean appliesTo(int number) {
-            return number % 7 == 0;
+            return number % baseNumber == 0;
         }
 
         @Override
