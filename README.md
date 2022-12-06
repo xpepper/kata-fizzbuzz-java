@@ -34,6 +34,4 @@ For adding yet another "Buzz-Word" no existing code should need to change!
 ## Machen
 
 
-- [R] rename tests to convey more info on how the rule works (E.g. `FooComesFirstAndIsOn...`)
-- [R] `SumRule` should have a list of rules to sum
-- [R] `OrRule` should have a list of rules and apply the first applicable
+- [R] improve Rules creation in `FizzBuzz`
