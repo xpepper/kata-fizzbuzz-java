@@ -7,8 +7,8 @@ import fizzbuzz.rule.*;
 
 public class FizzBuzz {
 
-    private final Rule fooForMultipleOfSix = new FooForMultipleOf(6);
-    private final Rule fooForMultipleOfSeven = new FooForMultipleOf(7);
+    private final Rule fooForMultipleOfSix = new RuleForMultipleOf(6, "Foo");
+    private final Rule fooForMultipleOfSeven = new RuleForMultipleOf(7, "Foo");
     private final Rule fooRule = new OrRule(fooForMultipleOfSix, fooForMultipleOfSeven);
 
     private final Rule fizzRule = new FizzRule();
@@ -21,12 +21,14 @@ public class FizzBuzz {
         return orRule.apply(number);
     }
 
-    private class FooForMultipleOf extends Rule {
+    private class RuleForMultipleOf extends Rule {
 
         private final int baseNumber;
+        private final String stringToApply;
 
-        public FooForMultipleOf(int baseNumber) {
+        public RuleForMultipleOf(int baseNumber, String stringToApply) {
             this.baseNumber = baseNumber;
+            this.stringToApply = stringToApply;
         }
 
         @Override
@@ -36,7 +38,7 @@ public class FizzBuzz {
 
         @Override
         protected String doApply(int number) {
-            return "Foo";
+            return stringToApply;
         }
     }
 }
